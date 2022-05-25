@@ -15,13 +15,13 @@ export class Client extends Person {
   @Column({ default: true })
   isActive: boolean;
 
-  @Column({ type: 'numeric' })
+  @Column({ type: 'integer' })
   balance: number;
 
   @Column({ unique: true, length: 10 })
   cardId: string;
 
-  @Column({ type: 'simple-array', default: [] })
+  @Column({ type: 'simple-array', nullable: true, default: [] })
   friends: string[];
 
   @OneToMany(() => Transaction, (transactions) => transactions.client)

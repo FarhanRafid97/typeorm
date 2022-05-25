@@ -21,7 +21,7 @@ export class Transaction extends BaseEntity {
   @Column({ type: 'enum', enum: TransactionType })
   type: string;
 
-  @Column({ type: 'numeric' })
+  @Column({ type: 'integer' })
   amount: number;
 
   @ManyToOne(() => Client, (client) => client.transactions)

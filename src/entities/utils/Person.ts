@@ -22,6 +22,6 @@ export class Person extends BaseEntity {
   @Column({ unique: true })
   email: string;
 
-  @Column({ unique: true })
-  phoneNumber: number;
+  @Column({ unique: true, length: 12 })
+  phoneNumber: string;
 }

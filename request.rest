@@ -1,0 +1,23 @@
+POST http://localhost:8080/api/client
+Content-Type: application/json
+
+{
+    "firstName":"farhan",
+    "lastName":"syauqi",
+    "email":"farhee2e@gmail.com",
+    "phoneNumber":"02483232818",
+    "cardId":"1293ek19e1",
+    "balance":0
+}
+
+###
+POST http://localhost:8080/api/client/11/transactions
+Content-Type: application/json
+
+{
+    "type":"deposite",
+    "amount":400
+}
+
+###
+GET http://localhost:8080/transactions
